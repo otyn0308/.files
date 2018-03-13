@@ -1,6 +1,6 @@
 PROMPT="%F{046}%n@%m%f %F{038}%~%f$ "
 
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 
 autoload -U compinit
 compinit
