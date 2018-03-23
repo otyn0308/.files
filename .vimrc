@@ -2,22 +2,46 @@ if has("syntax")
   syntax on
 endif
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+" Required:
+set runtimepath+=/home/otyn0308/.cache/dein/repos/github.com/Shougo/dein.vim
 
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'ConradIrwin/vim-bracketed-paste'
-NeoBundle 'TwitVim'
+" Required:
+call dein#begin('/home/otyn0308/.cache/dein')
 
-call neobundle#end()
-NeoBundleCheck
+" Required:
+call dein#add('Shougo/dein.vim')
+
+" Add or remove your plugins here:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+call dein#add('tomasr/molokai')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimfiler')
+call dein#add('scrooloose/nerdtree')
+call dein#add('Townk/vim-autoclose')
+call dein#add('ConradIrwin/vim-bracketed-paste')
+call dein#add('twitvim/twitvim')
+
+" You can specify revision/branch/tag.
+" call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
 
 filetype plugin indent on
 colorscheme molokai
@@ -27,6 +51,7 @@ let twitvim_force_ssl = 1
 let twitvim_count = 40
 nnoremap <C-f> :FriendsTwitter<CR>
 nnoremap <C-p> :PosttoTwitter<CR>
+
 
 set number
 set title
