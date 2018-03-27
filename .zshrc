@@ -1,4 +1,5 @@
-PROMPT="%F{046}%n@%m%f %F{038}%~%f$ "
+#PROMPT="%K{014}%n@%m%k%K{013}%~%k$ "
+PROMPT="%K{032}%F{255}%n@%m%f%k%K{025}%F{032}▶%f%k%K{025}%F{255} %~%f%k%K{020}%F{025}▶%f%k%K{020}%F{255}$%f%k%F{020}▶%f"
 
 export LANG=en_US.UTF-8
 
@@ -30,3 +31,14 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin \
                                            /sbin           \
                                            /bin            \
                                            /usr/X11R6/bin
+
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'prompt'
