@@ -22,8 +22,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <silent><C-y> :split<CR>
-nnoremap <silent><C-t> :vsplit<CR>
+nnoremap <C-x> <C-w>x
 nnoremap <silent><C-e> :NERDTree<CR>
 
 filetype plugin indent on
