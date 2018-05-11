@@ -17,6 +17,8 @@ set noswapfile
 set ignorecase
 set smartcase
 set hlsearch
+set background=dark
+set termguicolors
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -27,7 +29,8 @@ nnoremap <silent><C-e> :NERDTree<CR>
 
 filetype plugin indent on
 
-colorscheme deus
+colorscheme quantum
+"colors deus
 
 "twitvim
 let twitvim_browser_cmd = 'firefox'
@@ -35,19 +38,16 @@ let twitvim_force_ssl = 1
 let twitvim_count = 100
 nnoremap <C-f> :FriendsTwitter<CR>
 nnoremap <C-p> :PosttoTwitter<CR>
-nnoremap <S-r> <Leader>r
-nnoremap <S-f> <Leader>f
-
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
 
 " Required:
-set runtimepath+=/home/otyn0308/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/home/otyn0308/.cache/dein')
+call dein#begin('~/.cache/dein')
 
 " Required:
 call dein#add('Shougo/dein.vim')
@@ -60,7 +60,8 @@ call dein#add('Shougo/vimfiler')
 call dein#add('scrooloose/nerdtree')
 call dein#add('Townk/vim-autoclose')
 call dein#add('ConradIrwin/vim-bracketed-paste')
-call dein#add('ajmwagar/vim-deus')
+call dein#add('tyrannicaltoucan/vim-quantum')
+"call dein#add('ajmwagar/vim-deus')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('twitvim/twitvim')
