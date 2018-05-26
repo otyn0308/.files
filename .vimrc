@@ -19,6 +19,7 @@ set smartcase
 set hlsearch
 set background=dark
 set termguicolors
+set clipboard=unnamed,autoselect
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
