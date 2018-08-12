@@ -2,14 +2,17 @@ if has("syntax")
   syntax on
 endif
 
+set t_Co=256
 set number
 set title
 set cursorline
+set showmode
 set showcmd
+set ruler
 set laststatus=2
-set expandtab
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
+set expandtab
 set showmatch
 set hidden
 set nobackup
@@ -21,16 +24,21 @@ set background=dark
 set termguicolors
 set clipboard=unnamed,autoselect
 
+let g:airline_theme='quantum'
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-x> <C-w>x
 nnoremap <silent><C-e> :NERDTree<CR>
+inoremap jj <Esc>
 
 filetype plugin indent on
 
-colorscheme quantum
+"colors molokai
+colors otynium
+"colorscheme quantum
 "colors deus
 
 "twitvim
@@ -39,6 +47,12 @@ let twitvim_force_ssl = 1
 let twitvim_count = 100
 nnoremap <C-f> :FriendsTwitter<CR>
 nnoremap <C-p> :PosttoTwitter<CR>
+
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+highlight SpecialKey ctermbg=NONE guibg=NONE
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -62,7 +76,7 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('Townk/vim-autoclose')
 call dein#add('ConradIrwin/vim-bracketed-paste')
 call dein#add('tyrannicaltoucan/vim-quantum')
-"call dein#add('ajmwagar/vim-deus')
+call dein#add('ajmwagar/vim-deus')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('twitvim/twitvim')
