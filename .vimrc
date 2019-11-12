@@ -10,6 +10,7 @@ set showmode
 set showcmd
 set ruler
 set laststatus=2
+set statusline=%F
 set tabstop=4
 set shiftwidth=2
 set expandtab
@@ -26,13 +27,21 @@ set clipboard=unnamed,autoselect
 
 let g:airline_theme='quantum'
 
+"normal
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-x> <C-w>x
 nnoremap <silent><C-e> :NERDTree<CR>
+
+"insert
 inoremap jj <Esc>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
 
 filetype plugin indent on
 
@@ -48,10 +57,10 @@ let twitvim_count = 100
 nnoremap <C-f> :FriendsTwitter<CR>
 nnoremap <C-p> :PosttoTwitter<CR>
 
-highlight Normal ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
-highlight SpecialKey ctermbg=NONE guibg=NONE
-highlight EndOfBuffer ctermbg=NONE guibg=NONE
+"highlight Normal ctermbg=NONE guibg=NONE
+"highlight NonText ctermbg=NONE guibg=NONE
+"highlight SpecialKey ctermbg=NONE guibg=NONE
+"highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
 "dein Scripts-----------------------------
 if &compatible
