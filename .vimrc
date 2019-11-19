@@ -9,60 +9,65 @@ set cursorline
 set showmode
 set showcmd
 set ruler
+
 set laststatus=2
 set statusline=%F
+
 set tabstop=4
 set shiftwidth=2
 set expandtab
+
 set showmatch
 set hidden
 set nobackup
 set noswapfile
+
 set ignorecase
 set smartcase
 set hlsearch
+
 set background=dark
 set termguicolors
+
 set clipboard=unnamed,autoselect
 
-let g:airline_theme='quantum'
-
-"normal
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-x> <C-w>x
 nnoremap <silent><C-e> :NERDTree<CR>
-
-"insert
 inoremap jj <Esc>
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
+let NERDTreeShowHidden = 1
 
 filetype plugin indent on
 
-"colors molokai
-colors otynium
-"colorscheme quantum
-"colors deus
-
-"twitvim
+"----------Twitter-------------------------------
 let twitvim_browser_cmd = 'firefox'
 let twitvim_force_ssl = 1
 let twitvim_count = 100
 nnoremap <C-f> :FriendsTwitter<CR>
 nnoremap <C-p> :PosttoTwitter<CR>
 
+"----------colors--------------------------------
+let g:airline_theme='quantum'
+
+"colors molokai
+colors otynium
+"colorscheme quantum
+"colors deus
+
 "highlight Normal ctermbg=NONE guibg=NONE
 "highlight NonText ctermbg=NONE guibg=NONE
 "highlight SpecialKey ctermbg=NONE guibg=NONE
 "highlight EndOfBuffer ctermbg=NONE guibg=NONE
 
-"dein Scripts-----------------------------
+"----------dein Scripts--------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -106,4 +111,4 @@ if dein#check_install()
   call dein#install()
 endif
 
-"End dein Scripts-------------------------
+"----------End dein Scripts----------------------
