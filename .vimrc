@@ -55,7 +55,7 @@ nnoremap <C-f> :FriendsTwitter<CR>
 nnoremap <C-p> :PosttoTwitter<CR>
 
 "----------colors--------------------------------
-let g:airline_theme='quantum'
+let g:airline_theme='otynium'
 
 "colors molokai
 colors otynium
@@ -86,8 +86,6 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimfiler')
-call dein#add('mattn/webapi-vim')
-call dein#add('mattn/vim-mastodon')
 call dein#add('scrooloose/nerdtree')
 call dein#add('Townk/vim-autoclose')
 call dein#add('ConradIrwin/vim-bracketed-paste')
@@ -95,6 +93,8 @@ call dein#add('tyrannicaltoucan/vim-quantum')
 call dein#add('ajmwagar/vim-deus')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
+call dein#add('mattn/webapi-vim')
+call dein#add('mattn/vim-mastodon')
 call dein#add('twitvim/twitvim')
 
 " You can specify revision/branch/tag.
