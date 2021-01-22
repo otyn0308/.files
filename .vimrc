@@ -2,7 +2,8 @@ if has("syntax")
   syntax on
 endif
 
-set t_Co=256
+set term=xterm
+
 set number
 set title
 set cursorline
@@ -11,7 +12,7 @@ set showcmd
 set ruler
 
 set laststatus=2
-set statusline=%F
+"set statusline=%F
 
 set tabstop=4
 set shiftwidth=2
@@ -26,10 +27,11 @@ set ignorecase
 set smartcase
 set hlsearch
 
-set background=dark
-set termguicolors
+"set background=dark
+"set termguicolors
 
 set clipboard=unnamed,autoselect
+set backspace=start,eol,indent
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -38,10 +40,10 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-x> <C-w>x
 nnoremap <silent><C-e> :NERDTree<CR>
 inoremap jj <Esc>
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+"inoremap <C-h> <left>
+"inoremap <C-j> <down>
+"inoremap <C-k> <up>
+"inoremap <C-l> <right>
 
 let NERDTreeShowHidden = 1
 
@@ -55,7 +57,7 @@ nnoremap <C-f> :FriendsTwitter<CR>
 nnoremap <C-p> :PosttoTwitter<CR>
 
 "----------colors--------------------------------
-let g:airline_theme='otynium'
+"let g:airline_theme='otynium'
 
 "colors molokai
 colors otynium
@@ -66,6 +68,7 @@ colors otynium
 "highlight NonText ctermbg=NONE guibg=NONE
 "highlight SpecialKey ctermbg=NONE guibg=NONE
 "highlight EndOfBuffer ctermbg=NONE guibg=NONE
+"set t_Co=256
 
 "----------dein Scripts--------------------------
 if &compatible
@@ -96,9 +99,7 @@ call dein#add('vim-airline/vim-airline-themes')
 call dein#add('mattn/webapi-vim')
 call dein#add('mattn/vim-mastodon')
 call dein#add('twitvim/twitvim')
-
-" You can specify revision/branch/tag.
-" call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+call dein#add('neoclide/coc.nvim', { 'branch': 'release' })
 
 " Required:
 call dein#end()
