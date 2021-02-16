@@ -2,7 +2,7 @@ if has("syntax")
   syntax on
 endif
 
-set term=xterm
+set term=xterm-256color
 
 set number
 set title
