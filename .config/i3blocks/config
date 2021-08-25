@@ -25,27 +25,37 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
-command=/usr/lib/i3blocks/$BLOCK_NAME/$BLOCK_NAME
+command=~/i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
 [volume]
-command=/usr/lib/i3blocks/volume/volume
-label=♪ 
+label=VOL:
 interval=1
 signal=10
 
 [disk]
-#command=$SCRIPT_DIR/disk
-#LABEL=HOME 
+LABEL=HOME:
 #DIR=$HOME
 #ALERT_LOW=10
 interval=30
 
+[memory]
+label=MEM:
+interval=30
+
+#[ssid]
+#INTERFACE=wlp0s20f3
+#interval=60
+
+[uptime]
+label=uptime: 
+command=uptime | sed 's/.*up \([^,]*\),.*/\1/'
+interval=60
+
 [battery]
-command=/usr/lib/i3blocks/battery/battery
 interval=10
-label=⚡
+label=BATTERY:
 
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
