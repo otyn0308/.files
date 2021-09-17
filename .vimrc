@@ -99,7 +99,7 @@ call dein#add('vim-airline/vim-airline-themes')
 call dein#add('mattn/webapi-vim')
 call dein#add('mattn/vim-mastodon')
 call dein#add('twitvim/twitvim')
-call dein#add('neoclide/coc.nvim', { 'branch': 'release' })
+call dein#add('neoclide/coc.nvim', { 'merged': 0, 'rev': 'release' })
 
 " Required:
 call dein#end()
